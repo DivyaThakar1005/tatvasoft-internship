@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      color: #ff0000;
+      margin-top: 5px;
+    }
+  </style>
+  <script>
+    function register() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var email = document.getElementById("email").value;
+
+      // Perform validation on the form fields
+      if (username === "") {
+        document.getElementById("usernameError").innerHTML = "Please enter a username.";
+        return;
+      } else {
+        document.getElementById("usernameError").innerHTML = "";
+      }
+
+      if (password === "") {
+        document.getElementById("passwordError").innerHTML = "Please enter a password.";
+        return;
+      } else {
+        document.getElementById("passwordError").innerHTML = "";
+      }
+
+      if (password !== confirmPassword) {
+        document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match.";
+        return;
+      } else {
+        document.getElementById("confirmPasswordError").innerHTML = "";
+      }
+
+      if (email === "") {
+        document.getElementById("emailError").innerHTML = "Please enter an email address.";
+        return;
+      } else {
+        document.getElementById("emailError").innerHTML = "";
+      }
+
+      // Here, you can perform additional registration logic, such as checking if the username or email is already taken
+
+      // Registration successful
+      alert("Registration successful!");
+
+      // Reset the form
+      document.getElementById("registrationForm").reset();
+    }
+  </script>
+</head>
+<body>
+  <h1>Bookstore Registration</h1>
+  <div class="container">
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <span class="error-message" id="usernameError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <span class="error-message" id="passwordError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        <span class="error-message" id="confirmPasswordError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span class="error-message" id="emailError"></span>
+      </div>
+
+      <input type="button" value="Register" onclick="register()">
+
+    </form>
+    <br>
+    
+  </div>
+  <br>
+  <div>
+    <a href="login.html" class="log">Already a User?</a>
+    <style>
+        .log{
+            align-content: center;
+            margin-left: 740px;
+        }
+    </style>
+  </div>
+</body>
+</html>
+
+
+
+
+
