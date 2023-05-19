@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #666;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: #999;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .book {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .book h2 {
+      margin-top: 0;
+    }
+
+    .book p {
+      margin: 0;
+    }
+  </style>
+  <script>
+    function addToCart(bookId) {
+      // Here, you can add the logic to add the book to the shopping cart
+      alert("Book added to cart!");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Bookstore</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Books</a></li>
+      <li><a href="#">Authors</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="registration.html"></a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to our Bookstore!</h2>
+
+    <div class="book">
+      <h2>Book Title 1</h2>
+      <p>Author: Simon Sinek</p>
+      <p>Price:500</p>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    </div>
+
+    <div class="book">
+      <h2>Book Title 2</h2>
+      <p>Author: Robin Sharma</p>
+      <p>Price:450</p>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+
+    
+
+  </div>
+</body>
+</html>
